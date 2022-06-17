@@ -30,7 +30,7 @@ class UserBase(BaseModel):
 class UserResponse(BaseModel):
     id : int
     email : EmailStr
-    phone_number : str
+    phone_number : str = ""
     created_at : datetime
 
     class Config:
