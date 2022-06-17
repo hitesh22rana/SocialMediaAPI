@@ -38,16 +38,28 @@ https://fastapi-social-media-api.herokuapp.com/
   ```
 
 2) Now install all the requirements using the command :-
- ```python
+  ```python
     pip3 install -r requiremnts.txt
- ```
+  ```
 
-3) Now just run the command :-
- ```python
-    uvicorn app.main:app --reload
- ```
+3) Now add the .env file in the root directory and add values to the folloing keys :-
+  ```.env
+    DATABASE_HOSTNAME=
+    DATABASE_PORT=
+    DATABASE_PASSWORD=
+    DATABASE_NAME=
+    DATABASE_USERNAME=
+    SECRET_KEY=
+    ALGORITHM=
+    ACCESS_TOKEN_EXPIRE_MINUTES=
+  ```
+
+4) Now just run the command :-
+  ```python
+      uvicorn app.main:app --reload
+  ```
  - Lets Break this command in pieces to understand this uvicorn command.
    - Uvicorn is an ASGI web server implementation for Python. Learn more about [Uvicorn](https://www.uvicorn.org/)
    - [app](/app) is the parent directory for the [main](/app/main.py) file (Note :- any other name can also be given to the directory as well as to the main file).
    - [app.main:app](/app/main.py) at last app is the instance of the fastAPI.
-   - reload flag is used so that if any changes occur server gets reload by itself and the changes could get visible.
+   - --reload flag is used so that if any changes occur server gets reload by itself and the changes could get visible.
