@@ -24,4 +24,4 @@ app.include_router(vote.router)
 """GET Method - Root"""
 @app.get("/")
 def root():
-    return {"message": "Social Media API written in FastAPI"}
+    return {"message": "Social Media API built using FastAPI"}
