@@ -25,10 +25,12 @@ class PostUpdate(PostBase):
 class UserBase(BaseModel):
     email : EmailStr
     password : str
+    phone_number : str
 
 class UserResponse(BaseModel):
     id : int
     email : EmailStr
+    phone_number : str
     created_at : datetime
 
     class Config:
